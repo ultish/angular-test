@@ -5,6 +5,11 @@
 Items from firebase
 <ul *ngFor="let item of items | async">
   <li class="text">
-    {{item}}
+    {{item.name}}
   </li>
 </ul>
+    <nav>
+      <a [routerLink]="['dashboard']">Dashboard</a> 
+      <a [routerLink]="['characters']">Characters</a> 
+    </nav>
+<router-outlet></router-outlet>

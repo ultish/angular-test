@@ -1,0 +1,7 @@
+<p>
+  characters works!
+</p>
+<ul *ngFor="let charecter of characters | async">
+  <character [c]="character"></character>
+  <li>{{character.name}}</li>  
+</ul>
