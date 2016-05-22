@@ -12,7 +12,7 @@ export class CharacterComponent implements OnInit {
   @Input() c: Character;
 
   constructor() {
-    console.log("char constructor")
+    console.log("char constructor");
   }
 
   ngOnInit() {

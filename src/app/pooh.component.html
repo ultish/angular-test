@@ -1,15 +1,30 @@
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav>
+    Start sidenav
+    <br>
+    <button md-icon-button #mybutton (click)="sidenav.close()">Close</button>
+    <nav>
+      <a [routerLink]="['dashboard']">Dashboard</a><br/>
+      <a [routerLink]="['characters']">Characters</a>
+    </nav>
+
+  </md-sidenav>
+  Regular details here
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.open()">Open</button>
+  </md-toolbar>
+</md-sidenav-layout>
+
 <h1>
   {{title}}
-</h1>
-
-Items from firebase
+</h1> Items from firebase
 <ul *ngFor="let item of items | async">
   <li class="text">
     {{item.name}}
   </li>
 </ul>
-    <nav>
-      <a [routerLink]="['dashboard']">Dashboard</a> 
-      <a [routerLink]="['characters']">Characters</a> 
-    </nav>
+<nav>
+  <a [routerLink]="['dashboard']">Dashboard</a>
+  <a [routerLink]="['characters']">Characters</a>
+</nav>
 <router-outlet></router-outlet>
