@@ -16,9 +16,9 @@ export class CharactersComponent implements OnInit {
   characters: FirebaseListObservable<any[]>;
 
   constructor(charService: CharacterService, af: AngularFire) {
-    console.log("char service constructor")
-    this.characters = af.database.list("/characters");
-    // this.characters = charService.getCharacters();
+    console.log("characters constructor")
+    // this.characters = af.database.list("/characters");
+    this.characters = charService.getCharacters();
   }
 
   ngOnInit() {

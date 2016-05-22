@@ -1,3 +1,5 @@
 <div *ngIf="c">
   {{c.name}}
+  
+  <input [(ngModel)]="c.name"/>  <button (click)="save(c)">Save</button>
 </div>
