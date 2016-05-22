@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Character} from '../character.model';
+import { Character } from '../shared/character.model';
 
 @Component({
   moduleId: module.id,
@@ -9,8 +9,8 @@ import {Character} from '../character.model';
 })
 export class CharacterComponent implements OnInit {
 
-  @Input() c: Character; 
-  
+  @Input() c: Character;
+
   constructor() {
     console.log("char constructor")
   }

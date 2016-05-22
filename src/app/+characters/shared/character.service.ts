@@ -7,8 +7,7 @@ export class CharacterService implements OnInit {
   characters: FirebaseListObservable<any[]>;
 
   constructor(private _af: AngularFire) {
-    
-   
+
   }
 
   ngOnInit() {

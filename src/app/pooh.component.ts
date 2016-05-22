@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-import { DashboardComponent } from './+dashboard';
 import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import { DashboardComponent } from './+dashboard';
 import { CharactersComponent } from './+characters';
 
 @Component({

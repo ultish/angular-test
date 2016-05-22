@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CharacterService } from '../shared/character.service';
+import { CharacterService } from './shared/character.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-import {CharacterComponent} from '../shared/character/character.component';
+import { CharacterComponent } from './character/character.component';
 
 @Component({
   moduleId: module.id,
@@ -14,12 +14,12 @@ import {CharacterComponent} from '../shared/character/character.component';
 export class CharactersComponent implements OnInit {
 
   characters: FirebaseListObservable<any[]>;
-  
+
   constructor(charService: CharacterService, af: AngularFire) {
     console.log("char service constructor")
     this.characters = af.database.list("/characters");
     // this.characters = charService.getCharacters();
-  } 
+  }
 
   ngOnInit() {
   }
