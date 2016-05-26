@@ -16,12 +16,12 @@ export class CharactersComponent implements OnInit {
   characters: FirebaseListObservable<any[]>;
 
   constructor(charService: CharacterService, af: AngularFire) {
-    console.log("characters constructor")
-    // this.characters = af.database.list("/characters");
+    console.log("characters constructor");
     this.characters = charService.getCharacters();
   }
 
   ngOnInit() {
+    
   }
 
 }

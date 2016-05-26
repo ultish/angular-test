@@ -12,6 +12,7 @@ export class CharacterComponent implements OnInit {
 
   @Input() c: Character;
 
+  
   constructor(private cs: CharacterService) {
     console.log("char constructor");
   }
@@ -21,6 +22,7 @@ export class CharacterComponent implements OnInit {
 
   save(char: Character) {
     console.log(char);
+    
     this.cs.saveCharacter(char);
   }
 
